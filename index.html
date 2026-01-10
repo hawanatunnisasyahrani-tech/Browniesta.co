@@ -1,93 +1,227 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <title>UMKM Kita</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background: #f5f5f5;
-    }
-    header {
-      background: #111;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-    .container {
-      padding: 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
-    .produk {
-      background: white;
-      padding: 15px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      margin-bottom: 20px;
-      display: flex;
-      gap: 15px;
-      align-items: center;
-    }
-    .produk img {
-      width: 150px;
-      border-radius: 10px;
-    }
-    .produk h2 {
-      margin: 0;
-    }
-    .btn-wa {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 10px 15px;
-      background: #25D366;
-      color: white;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
-    }
-    .btn-wa:hover {
-      background: #1ebe5d;
-    }
-  </style>
+<meta charset="UTF-8">
+<title>UMKM Terpal Kita</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f6f8;
+  scroll-behavior: smooth;
+}
+
+/* ===== NAVBAR ===== */
+nav {
+  background: #111;
+  padding: 12px 25px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  color: #25D366;
+}
+
+/* ===== HEADER ===== */
+header {
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  color: white;
+  padding: 70px 20px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 36px;
+}
+
+/* ===== SECTION ===== */
+section {
+  padding: 50px 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* ===== PRODUK GRID ===== */
+.produk-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card .info {
+  padding: 15px;
+}
+
+.card h3 {
+  margin-top: 0;
+}
+
+.btn-wa {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 14px;
+  background: #25D366;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.btn-wa:hover {
+  background: #1ebe5d;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background: #111;
+  color: white;
+  text-align: center;
+  padding: 25px;
+  margin-top: 50px;
+}
+</style>
 </head>
 <body>
 
+<!-- ===== NAVBAR ===== -->
+<nav>
+<ul>
+  <li><a href="#tentang">Tentang</a></li>
+  <li><a href="#keunggulan">Keunggulan</a></li>
+  <li><a href="#produk">Produk Terpal</a></li>
+  <li><a href="#kontak">Kontak</a></li>
+</ul>
+</nav>
+
+<!-- ===== HEADER ===== -->
 <header>
-  <h1>UMKM Nisa Store</h1>
-  <p>Produk UMKM – Pesan Mudah via WhatsApp</p>
+<h1>UMKM TERPAL KITA</h1>
+<p>Pusat Terpal Gulungan & Custom | Kolam • Tenda • Penutup • Proyek</p>
 </header>
 
-<div class="container">
+<!-- ===== TENTANG ===== -->
+<section id="tentang">
+<h2>Tentang Kami</h2>
+<p style="text-align:center;">
+Kami adalah UMKM yang bergerak di bidang penjualan terpal berbagai tipe dan ukuran.
+Melayani terpal kolam, terpal tenda, terpal proyek, dan terpal custom sesuai kebutuhan pelanggan.
+Pemesanan langsung melalui WhatsApp.
+</p>
+</section>
 
-  <div class="produk">
-    <img src="https://via.placeholder.com/150" alt="Produk 1">
-    <div>
-      <h2>Produk 1</h2>
-      <p>Deskripsi singkat produk. Enak, murah, berkualitas.</p>
-      <p><b>Harga:</b> Rp 10.000</p>
-      <a class="btn-wa" target="_blank"
-         href="https://wa.me/6281234567890?text=Halo,%20saya%20mau%20pesan%20Produk%201">
-         Pesan via WhatsApp
-      </a>
-    </div>
-  </div>
+<!-- ===== KEUNGGULAN ===== -->
+<section id="keunggulan">
+<h2>Keunggulan Kami</h2>
+<ul>
+<li>✔ Bahan tebal & kuat</li>
+<li>✔ Banyak pilihan tipe dan warna</li>
+<li>✔ Bisa custom ukuran</li>
+<li>✔ Harga terjangkau UMKM</li>
+<li>✔ Respon cepat via WhatsApp</li>
+</ul>
+</section>
 
-  <div class="produk">
-    <img src="https://via.placeholder.com/150" alt="Produk 2">
-    <div>
-      <h2>Produk 2</h2>
-      <p>Deskripsi singkat produk kedua.</p>
-      <p><b>Harga:</b> Rp 15.000</p>
-      <a class="btn-wa" target="_blank"
-         href="https://wa.me/6281234567890?text=Halo,%20saya%20mau%20pesan%20Produk%202">
-         Pesan via WhatsApp
-      </a>
-    </div>
+<!-- ===== PRODUK ===== -->
+<section id="produk">
+<h2>Daftar Produk Terpal</h2>
+
+<div class="produk-grid">
+
+<!-- ===== CARD PRODUK ===== -->
+<div class="card">
+  <img src="produk1.jpg" alt="Terpal A12">
+  <div class="info">
+    <h3>Terpal A12 Biru</h3>
+    <p>Ukuran: Custom meter<br>Ketebalan: Tebal</p>
+    <p><b>Harga:</b> Rp 14.500 / meter</p>
+    <a class="btn-wa" target="_blank"
+    href="https://wa.me/6281234567890?text=Halo,%20saya%20mau%20pesan%20Terpal%20A12%20Biru">
+    Pesan via WhatsApp</a>
   </div>
+</div>
+
+<div class="card">
+  <img src="produk2.jpg" alt="Terpal Garuda">
+  <div class="info">
+    <h3>Terpal Garuda</h3>
+    <p>Ukuran: Custom meter<br>Multifungsi</p>
+    <p><b>Harga:</b> Rp 14.500 / meter</p>
+    <a class="btn-wa" target="_blank"
+    href="https://wa.me/6281234567890?text=Halo,%20saya%20mau%20pesan%20Terpal%20Garuda">
+    Pesan via WhatsApp</a>
+  </div>
+</div>
+
+<div class="card">
+  <img src="produk3.jpg" alt="Terpal Cheetah">
+  <div class="info">
+    <h3>Terpal Cheetah</h3>
+    <p>Ukuran: Custom<br>Tersedia banyak warna</p>
+    <p><b>Harga:</b> Rp 14.500 / meter</p>
+    <a class="btn-wa" target="_blank"
+    href="https://wa.me/6281234567890?text=Halo,%20saya%20mau%20pesan%20Terpal%20Cheetah">
+    Pesan via WhatsApp</a>
+  </div>
+</div>
 
 </div>
+</section>
+
+<!-- ===== KONTAK ===== -->
+<section id="kontak">
+<h2>Kontak Kami</h2>
+<p style="text-align:center;">
+📍 Alamat: - <br>
+🕒 Jam Operasional: 08.00 – 21.00 <br>
+📱 WhatsApp: 08xxxxxxxxxx
+</p>
+</section>
+
+<footer>
+<p>© 2026 UMKM Terpal Kita | Pemesanan via WhatsApp</p>
+</footer>
 
 </body>
 </html>
