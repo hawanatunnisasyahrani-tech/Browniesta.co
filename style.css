@@ -61,16 +61,21 @@ nav a:hover{ color:#ffd8a8; }
   align-items:center;
   justify-content:center;
 }
-.hero-slider img{
-  width:100%;
-  height:75vh;
-  object-fit:cover;
-  position:absolute;
-  opacity:0;
-  transition:opacity 1s ease-in-out;
+.hero-slider img {
+  width: auto; /* biar tidak full lebar kalau mau ada jarak samping */
+  max-width: 90%; /* kecilin samping kanan kiri */
+  height: 75vh;
+  object-fit: cover;
+  position: absolute;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  left: 50%;
+  transform: translateX(-50%); /* supaya tetap di tengah */
 }
-.hero-slider img.active{ opacity:1; }
-.hero-overlay{
+
+.hero-slider img.active {
+  opacity: 1;
+}
   position:absolute;
   top:0; left:0;
   width:100%; height:100%;
