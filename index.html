@@ -112,10 +112,7 @@
             <div class="logo">
                 <h2>BROWNIES<span>CHOCO</span></h2>
             </div>
-            <div class="search-container">
-                <input type="text" placeholder="Cari brownies favoritmu...">
-                <button class="btn-search">Cari</button>
-            </div>
+            https://hawanatunnisasyahrani-tech.github.io/umkm-website/
             <div class="nav-right">
                 <div>Masuk / Daftar</div>
                 <div>🛒 <b>Rp0</b></div>
@@ -350,6 +347,41 @@
     window.onclick = function(event) {
         if (event.target == document.getElementById('productModal')) closeModal();
     }
+    function searchProduct() {
+    // 1. Ambil kata kunci dari input
+    const keyword = document.getElementById('searchInput').value.toLowerCase();
+    
+    // 2. Ambil semua kartu produk
+    const cards = document.getElementsByClassName('product-card');
+    let found = false;
+
+    // 3. Loop setiap kartu untuk dicocokkan namanya
+    for (let i = 0; i < cards.length; i++) {
+        const title = cards[i].querySelector('h3').innerText.toLowerCase();
+        
+        if (title.includes(keyword)) {
+            cards[i].style.display = "flex"; // Tampilkan jika cocok
+            found = true;
+        } else {
+            cards[i].style.display = "none"; // Sembunyikan jika tidak cocok
+        }
+    }
+
+    // 4. Scroll otomatis ke bagian produk agar hasilnya terlihat
+    document.getElementById('produk').scrollIntoView({ behavior: 'smooth' });
+
+    if (!found && keyword !== "") {
+        alert("Maaf, produk '" + keyword + "' tidak ditemukan.");
+    }
+}
+
+// Fitur Tambahan: Tekan 'Enter' langsung cari
+document.getElementById("searchInput").addEventListener("keyup", function(event) {
+    if (event.keyCode === 13) {
+        event.preventDefault();
+        searchProduct();
+    }
+});
 </script>
 <section id="pemesanan" style="padding: 80px 5%; background-color: #fdfdfd;">
     <div style="max-width: 1000px; margin: 0 auto;">
