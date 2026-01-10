@@ -287,8 +287,9 @@ padding:25px;margin-top:60px
 </div>
 
 <div class="see-all">
-<a href="#kontak">See All Product</a>
+  <a href="#produk" id="seeAllBtn">See All Product</a>
 </div>
+
 </section>
 
 <!-- PEMESANAN -->
@@ -360,6 +361,12 @@ sliderProduk.scrollLeft = 0;
 function toggleMenu(){
 document.getElementById("menu").classList.toggle("active");
 }
+  // Tombol See All Product scroll ke section Produk
+document.getElementById('seeAllBtn').addEventListener('click', function(e){
+  e.preventDefault(); // mencegah default anchor link
+  document.getElementById('produk').scrollIntoView({ behavior: 'smooth' });
+});
+
 </script>
 
 </body>
