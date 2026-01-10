@@ -1,1 +1,165 @@
+/* ================= GLOBAL ================= */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins', sans-serif;
+  scroll-behavior: smooth;
+}
+body{
+  background:#faf7f2;
+  color:#3a2a1a;
+}
+
+/* ================= NAVBAR ================= */
+nav{
+  position:fixed;
+  top:0; left:0;
+  width:100%;
+  background:rgba(43,27,18,.95);
+  padding:12px 6%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  z-index:999;
+}
+nav h2{
+  color:#f3c892;
+  font-size:22px;
+}
+nav .menu{
+  display:flex;
+  gap:20px;
+}
+nav a{
+  color:white;
+  text-decoration:none;
+  font-weight:500;
+  font-size:15px;
+}
+nav a:hover{ color:#f3c892; }
+.menu-btn{ display:none; color:white; font-size:22px; cursor:pointer; }
+
+@media(max-width:768px){
+  nav .menu{
+    position:absolute;
+    top:60px;
+    left:0;
+    width:100%;
+    flex-direction:column;
+    align-items:center;
+    background:#2b1b12;
+    display:none;
+    padding:20px 0;
+  }
+  nav .menu.active{ display:flex; }
+  .menu-btn{ display:block; }
+}
+
+/* ================= HERO ================= */
+.hero{
+  margin-top:65px;
+  position:relative;
+  width:100%;
+  height:70vh;
+  overflow:hidden;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  background:#2b1b12;
+}
+.slider img{
+  width:80%;
+  height:auto;
+  border-radius:15px;
+  display:none;
+}
+.slider img.active{
+  display:block;
+}
+.hero-content{
+  position:absolute;
+  color:white;
+  max-width:600px;
+}
+.hero-content h1{
+  font-size:36px;
+  margin-bottom:15px;
+}
+.hero-content p{
+  font-size:16px;
+  margin-bottom:20px;
+}
+.btn{
+  display:inline-block;
+  background:#ffd8a8;
+  color:#2b1b12;
+  padding:10px 20px;
+  border-radius:30px;
+  font-weight:600;
+  text-decoration:none;
+}
+.btn:hover{ background:white; }
+
+/* ================= OUR PRODUCTS ================= */
+.our-products{
+  padding:80px 6%;
+  background:#fff;
+  text-align:center;
+}
+.our-products .title h2{
+  font-size:32px;
+  margin-bottom:15px;
+}
+.our-products .title p{
+  font-size:16px;
+  max-width:700px;
+  margin:0 auto 40px;
+}
+.product-cards{
+  display:flex;
+  justify-content:center;
+  gap:25px;
+  flex-wrap:wrap;
+}
+.product-card{
+  background:white;
+  border-radius:15px;
+  box-shadow:0 6px 18px rgba(0,0,0,0.1);
+  padding:15px;
+  width:220px;
+  text-align:center;
+}
+.product-card img{
+  width:100%;
+  height:150px;
+  object-fit:cover;
+  border-radius:10px;
+}
+.product-card h3{
+  font-size:16px;
+  margin:10px 0 5px;
+}
+.product-card p{
+  color:#c47a00;
+  font-weight:600;
+}
+
+/* ================= FOOTER ================= */
+footer{
+  background:#2b1b12;
+  color:white;
+  text-align:center;
+  padding:25px;
+  margin-top:60px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media(max-width:768px){
+  .product-cards{
+    flex-direction:column;
+    align-items:center;
+  }
+}
 
