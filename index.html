@@ -1,245 +1,294 @@
+
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
 <meta charset="UTF-8">
-<title>Terpal Indonesia</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Brownies Kita – UMKM Brownies Homemade</title>
 
 <style>
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
-  background: #000;
-  color: white;
+    margin: 0;
+    background: #f5f5f5;
+    color: #333;
 }
 
-/* ===== NAVBAR ===== */
+/* NAVBAR */
 nav {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background: rgba(0,0,0,0.8);
-  backdrop-filter: blur(10px);
-  display: flex;
-  justify-content: space-between;
-  padding: 15px 50px;
-  z-index: 1000;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #111;
+    padding: 12px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+nav h2 {
+    color: white;
+    margin: 0;
+    letter-spacing: 1px;
 }
 
 nav a {
-  color: white;
-  text-decoration: none;
-  margin-left: 25px;
-  font-size: 14px;
-  opacity: 0.8;
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: bold;
 }
 
 nav a:hover {
-  opacity: 1;
+    color: #ffcc70;
 }
 
-/* ===== SECTION UMUM ===== */
+/* HERO */
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)), url("banner.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+.hero h1 {
+    font-size: 48px;
+}
+
+.hero p {
+    font-size: 20px;
+    max-width: 700px;
+    margin: auto;
+}
+
+.btn {
+    display: inline-block;
+    background: #25D366;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.btn:hover {
+    background: #1ebe5d;
+}
+
+/* SECTION */
 section {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 80px 20px;
+    padding: 80px 10%;
 }
 
-/* ===== HERO ===== */
-#hero {
-  background: radial-gradient(circle at top, #111, #000);
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
 }
 
-#hero h1 {
-  font-size: 60px;
-  font-weight: 600;
+.section-title h2 {
+    font-size: 32px;
 }
 
-#hero p {
-  margin-top: 15px;
-  font-size: 22px;
-  opacity: 0.8;
+/* TENTANG */
+.about {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    align-items: center;
 }
 
-.hero-img {
-  margin-top: 40px;
-  width: 60%;
-  max-width: 600px;
-}
-
-/* ===== SECTION TERANG ===== */
-.light {
-  background: white;
-  color: black;
-}
-
-.light p {
-  opacity: 0.7;
-}
-
-/* ===== PRODUK ===== */
-.produk {
-  max-width: 1000px;
-}
-
-.produk img {
-  width: 100%;
-  max-width: 600px;
-  margin-top: 30px;
-}
-
-.produk h2 {
-  font-size: 42px;
-}
-
-.produk p {
-  margin-top: 10px;
-  font-size: 20px;
-}
-
-/* ===== GRID PRODUK ===== */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 25px;
-  margin-top: 50px;
-  width: 100%;
+/* PRODUK */
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 25px;
 }
 
 .card {
-  background: #111;
-  border-radius: 20px;
-  padding: 20px;
-  text-align: center;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,.1);
+    transition: .3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
 }
 
 .card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 12px;
-  background: #333;
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
 }
 
-.card h3 {
-  margin-top: 15px;
+.card .content {
+    padding: 15px;
 }
 
-.card p {
-  opacity: 0.8;
-  margin: 8px 0;
+.price {
+    color: #e67e22;
+    font-weight: bold;
 }
 
-.card a {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 10px 18px;
-  background: white;
-  color: black;
-  border-radius: 999px;
-  text-decoration: none;
-  font-weight: 500;
+/* ORDER */
+.order-box {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 700px;
+    margin: auto;
+    box-shadow: 0 5px 15px rgba(0,0,0,.1);
+    text-align: center;
 }
 
-.card a:hover {
-  opacity: 0.8;
-}
-
-/* ===== FOOTER ===== */
+/* FOOTER */
 footer {
-  padding: 50px 20px;
-  text-align: center;
-  background: #000;
-  opacity: 0.7;
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 20px;
 }
 </style>
 </head>
 
 <body>
 
+<!-- NAVBAR -->
 <nav>
-  <div>Terpal Indonesia</div>
-  <div>
-    <a href="#hero">Beranda</a>
-    <a href="#tentang">Tentang</a>
-    <a href="#produk">Produk</a>
-    <a href="#kontak">Kontak</a>
-  </div>
+<h2>Brownies Kita</h2>
+<div>
+<a href="#home">Home</a>
+<a href="#about">Tentang</a>
+<a href="#produk">Produk</a>
+<a href="#order">Pesan</a>
+<a href="#kontak">Kontak</a>
+</div>
 </nav>
 
-<!-- HERO -->
-<section id="hero">
-  <h1>Terpal Premium.</h1>
-  <p>Kuat. Tebal. Tahan lama.</p>
-  <img src="hero.jpg" class="hero-img" alt="Terpal utama">
-</section>
+<!-- HOME -->
+<div class="hero" id="home">
+<div>
+<h1>Brownies Kita</h1>
+<p>UMKM brownies homemade dengan rasa premium, lembut, dan coklat melimpah. Cocok untuk camilan, hampers, dan acara spesial.</p>
+<a class="btn" target="_blank" href="https://wa.me/6285216919157?text=Halo%20saya%20ingin%20memesan%20brownies">Pesan via WhatsApp</a>
+</div>
+</div>
 
 <!-- TENTANG -->
-<section id="tentang" class="light">
-  <div class="produk">
-    <h2>Dirancang untuk kebutuhan berat.</h2>
-    <p>Terpal kolam, tenda, penutup, dan industri.</p>
-    <img src="tentang.jpg" alt="Tentang terpal">
-  </div>
+<section id="about">
+<div class="section-title">
+<h2>Tentang Kami</h2>
+</div>
+<div class="about">
+<div>
+<h3>Profil UMKM</h3>
+<p><b>Brownies Kita</b> adalah UMKM yang bergerak di bidang makanan, khususnya brownies homemade. Kami memproduksi brownies segar setiap hari dengan bahan berkualitas, tanpa pengawet, dan rasa coklat yang kuat.</p>
+
+<p>Kami melayani pemesanan untuk pribadi, hadiah, dan acara kecil. Pemesanan dapat dilakukan langsung melalui WhatsApp untuk memudahkan pelanggan.</p>
+
+<p><b>Jam Operasional:</b><br>
+Senin – Sabtu: 08.00 – 20.00 WIB</p>
+
+<p><b>Kontak:</b><br>
+WhatsApp: 0852-1691-9157</p>
+</div>
+
+<div>
+<img src="tentang.jpg" style="width:100%; border-radius:15px;">
+</div>
+</div>
 </section>
 
-<!-- PRODUK UNGGULAN -->
-<section class="dark">
-  <div class="produk">
-    <h2>Terpal A12</h2>
-    <p>Tebal. Fleksibel. Tahan cuaca.</p>
-    <img src="produk-utama.jpg" alt="Terpal A12">
-  </div>
-</section>
-
-<!-- LIST PRODUK -->
+<!-- PRODUK -->
 <section id="produk">
-  <h2>Produk Kami</h2>
+<div class="section-title">
+<h2>Katalog Produk</h2>
+<p>Beberapa varian brownies yang tersedia</p>
+</div>
 
-  <div class="grid">
+<div class="products">
 
-    <div class="card">
-      <img src="p1.jpg">
-      <h3>Terpal Kolam</h3>
-      <p>Rp 14.500 / meter</p>
-      <a href="https://wa.me/628XXXXXXXXXX">Beli</a>
-    </div>
+<div class="card">
+<img src="produk1.jpg">
+<div class="content">
+<h3>Brownies Coklat Original</h3>
+<p>Brownies lembut dengan coklat premium.</p>
+<p class="price">Rp 25.000</p>
+<a class="btn" target="_blank" href="https://wa.me/6285216919157?text=Halo%20saya%20ingin%20memesan%20Brownies%20Coklat%20Original">Pesan</a>
+</div>
+</div>
 
-    <div class="card">
-      <img src="p2.jpg">
-      <h3>Terpal Tenda</h3>
-      <p>Rp 14.500 / meter</p>
-      <a href="https://wa.me/628XXXXXXXXXX">Beli</a>
-    </div>
+<div class="card">
+<img src="produk2.jpg">
+<div class="content">
+<h3>Brownies Keju</h3>
+<p>Perpaduan coklat dan keju melimpah.</p>
+<p class="price">Rp 30.000</p>
+<a class="btn" target="_blank" href="https://wa.me/6285216919157?text=Halo%20saya%20ingin%20memesan%20Brownies%20Keju">Pesan</a>
+</div>
+</div>
 
-    <div class="card">
-      <img src="p3.jpg">
-      <h3>Terpal Penutup</h3>
-      <p>Rp 14.500 / meter</p>
-      <a href="https://wa.me/628XXXXXXXXXX">Beli</a>
-    </div>
+<div class="card">
+<img src="produk3.jpg">
+<div class="content">
+<h3>Brownies Lumer</h3>
+<p>Isi coklat lumer di dalam brownies.</p>
+<p class="price">Rp 35.000</p>
+<a class="btn" target="_blank" href="https://wa.me/6285216919157?text=Halo%20saya%20ingin%20memesan%20Brownies%20Lumer">Pesan</a>
+</div>
+</div>
 
-  </div>
+</div>
+</section>
+
+<!-- ORDER -->
+<section id="order">
+<div class="section-title">
+<h2>Cara Pemesanan</h2>
+</div>
+
+<div class="order-box">
+<p>Untuk memesan brownies, klik tombol di bawah ini. Pesan otomatis akan terbuka di WhatsApp.</p>
+
+<p><b>Format Pesanan:</b><br>
+Nama:<br>
+Produk:<br>
+Jumlah:<br>
+Alamat:</p>
+
+<a class="btn" target="_blank" href="https://wa.me/6285216919157?text=Halo%20saya%20ingin%20memesan:%0ANama:%0AProduk:%0AJumlah:%0AAlamat:">Pesan Sekarang</a>
+</div>
 </section>
 
 <!-- KONTAK -->
-<section id="kontak" class="light">
-  <h2>Hubungi Kami</h2>
-  <p>Pesan langsung via WhatsApp</p>
-  <p><b>08xxxxxxxxxx</b></p>
+<section id="kontak">
+<div class="section-title">
+<h2>Kontak Kami</h2>
+</div>
+
+<p><b>Brownies Kita</b></p>
+<p>Jam Operasional: Senin – Sabtu (08.00 – 20.00)</p>
+<p>WhatsApp: 0852-1691-9157</p>
+<p>Alamat: (Isi alamat UMKM kamu di sini)</p>
 </section>
 
 <footer>
-  © 2026 UMKM Terpal Indonesia
+<p>© 2026 Brownies Kita – Digitalisasi UMKM</p>
 </footer>
 
 </body>
