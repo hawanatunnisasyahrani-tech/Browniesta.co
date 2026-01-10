@@ -17,5 +17,3 @@ function initHeroSlider(){
     showSlide(index);
   },4000);
 }
-
-
