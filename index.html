@@ -361,57 +361,80 @@
             
             <p style="color: #555; font-size: 17px; line-height: 1.8; max-width: 900px; margin: 0 auto; text-align: center;">
                 Apakah kamu ingin Brownies UMKM untuk kebutuhan berbagai kegiatan kamu? <br>
-                Kami menawarkan banyak varian lezat yang dapat dipesan dalam jumlah besar, ideal untuk acara perusahaan, kafe, restoran, dan toko ritel. Dengan bahan-bahan terbaik dan resep yang teruji, Brownies UMKM tidak hanya memanjakan lidah tetapi juga menambah nilai bagi bisnis kamu. <br>
-                Hubungi kami untuk mendapatkan penawaran khusus dan solusi pemesanan yang disesuaikan dengan kebutuhan Kamu.
+                Kami menawarkan banyak varian lezat yang dapat dipesan dalam jumlah besar. Hubungi kami untuk mendapatkan penawaran khusus.
             </p>
         </div>
 
         <div style="max-width: 700px; margin: 0 auto; background: #fdfdfd; padding: 40px; border-radius: 20px; border: 1px solid #eee; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
-            <form action="#">
+            <form id="waForm">
                 <div style="margin-bottom: 20px;">
                     <label style="display: block; margin-bottom: 8px; font-weight: 600; color: #4a2c2a;">Kebutuhan*</label>
-                    <select required style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px; outline: none; font-family: 'Poppins', sans-serif;">
+                    <select id="kebutuhan" required style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px; outline: none; font-family: 'Poppins', sans-serif;">
                         <option value="">—Silakan pilih opsi—</option>
-                        <option value="B2B">Bisnis to Bisnis</option>
-                        <option value="Mitra">Jadi Mitra</option>
-                        <option value="Keluhan">Keluhan & Saran</option>
+                        <option value="Bisnis to Bisnis">Bisnis to Bisnis</option>
+                        <option value="Jadi Mitra">Jadi Mitra</option>
+                        <option value="Keluhan & Saran">Keluhan & Saran</option>
                     </select>
                 </div>
 
                 <div style="margin-bottom: 20px;">
                     <label style="display: block; margin-bottom: 8px; font-weight: 600; color: #4a2c2a;">Nama Lengkap*</label>
-                    <input type="text" required placeholder="Masukkan nama lengkap" style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px; outline: none; font-family: 'Poppins', sans-serif;">
+                    <input type="text" id="nama" required placeholder="Masukkan nama lengkap" style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px; outline: none; font-family: 'Poppins', sans-serif;">
                 </div>
 
                 <div style="margin-bottom: 20px;">
-                    <label style="display: block; margin-bottom: 8px; font-weight: 600; color: #4a2c2a;">No. WhatsApp*</label>
-                    <input type="tel" required placeholder="Contoh: 085216919157" style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px; outline: none; font-family: 'Poppins', sans-serif;">
-                </div>
-
-                <div style="margin-bottom: 20px;">
-                    <label style="display: block; margin-bottom: 8px; font-weight: 600; color: #4a2c2a;">Email</label>
-                    <input type="email" placeholder="Masukkan alamat email (opsional)" style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px; outline: none; font-family: 'Poppins', sans-serif;">
+                    <label style="display: block; margin-bottom: 8px; font-weight: 600; color: #4a2c2a;">No. WhatsApp Anda*</label>
+                    <input type="tel" id="telp" required placeholder="Contoh: 0812345678" style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px; outline: none; font-family: 'Poppins', sans-serif;">
                 </div>
 
                 <div style="margin-bottom: 30px;">
                     <label style="display: block; margin-bottom: 8px; font-weight: 600; color: #4a2c2a;">Isi Pesan*</label>
-                    <textarea required rows="5" placeholder="Tuliskan detail kebutuhan Anda..." style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px; outline: none; font-family: 'Poppins', sans-serif; resize: vertical;"></textarea>
+                    <textarea id="pesan" required rows="5" placeholder="Tuliskan detail kebutuhan Anda..." style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px; outline: none; font-family: 'Poppins', sans-serif; resize: vertical;"></textarea>
                 </div>
 
-                <button type="submit" style="width: 100%; background: #4a2c2a; color: white; padding: 15px; border: none; border-radius: 8px; font-weight: 700; font-size: 16px; cursor: pointer; transition: 0.3s; text-transform: uppercase;">
-                    Kirim Pesan
+                <button type="button" onclick="kirimKeWA()" style="width: 100%; background: #25d366; color: white; padding: 15px; border: none; border-radius: 8px; font-weight: 700; font-size: 16px; cursor: pointer; transition: 0.3s; text-transform: uppercase;">
+                    Kirim Pesan via WhatsApp
                 </button>
             </form>
         </div>
-
-        <p style="text-align: center; margin-top: 40px; color: #777; font-size: 15px;">
-            Kepuasan pelanggan adalah prioritas kami. Kami akan dengan senang hati melayani dan merespons setiap pesan yang Anda kirimkan 🤎
-        </p>
     </div>
 </section>
-    
-</section>
-    </main>
+
+<script>
+    function kirimKeWA() {
+        // Ambil data dari inputan
+        const kebutuhan = document.getElementById('kebutuhan').value;
+        const nama = document.getElementById('nama').value;
+        const telp = document.getElementById('telp').value;
+        const pesan = document.getElementById('pesan').value;
+        
+        // Nomor WA tujuan (Nomor kamu)
+        const nomorWA = "6285216919157"; 
+
+        // Validasi sederhana
+        if (kebutuhan === "" || nama === "" || telp === "" || pesan === "") {
+            alert("Mohon lengkapi semua data yang bertanda (*) ya!");
+            return;
+        }
+
+        // Susun teks pesan (URL Encoded)
+        const teks = "Halo Admin Brownies UMKM,%0A%0A" +
+                     "*Informasi Kontak Baru*%0A" +
+                     "--------------------------------%0A" +
+                     "*Kebutuhan:* " + kebutuhan + "%0A" +
+                     "*Nama:* " + nama + "%0A" +
+                     "*No. WA:* " + telp + "%0A" +
+                     "*Pesan:* " + pesan + "%0A" +
+                     "--------------------------------%0A" +
+                     "Mohon segera direspon, terima kasih.";
+
+        // Link untuk membuka WhatsApp
+        const urlWA = "https://wa.me/" + nomorWA + "?text=" + teks;
+
+        // Buka di jendela baru
+        window.open(urlWA, '_blank');
+    }
+</script>
 
     <footer>
         <p>© 2026 Digitalisasi UMKM – Brownies Lezat</p>
