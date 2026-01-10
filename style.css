@@ -51,20 +51,23 @@ nav a:hover{ color:#ffd8a8; }
   .menu-btn{ display:block; }
 }
 
+/* HERO SECTION */
 .hero {
   position: relative;
   width: 100%;
-  height: 75vh;
-  overflow: hidden;
+  height: 100vh; /* full screen */
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 
+/* Hero Slider / Tempat Foto Produk */
 .hero-slider {
   position: relative;
-  width: 80%; /* bikin ada jarak kanan kiri */
+  width: 70%; /* 100% - 15% kiri - 15% kanan = 70% */
   height: 100%;
+  margin: 0 auto;
 }
 
 .hero-slider img {
@@ -76,25 +79,31 @@ nav a:hover{ color:#ffd8a8; }
   transform: translateX(-50%);
   opacity: 0;
   transition: opacity 1s ease-in-out;
-  border-radius: 15px; /* biar gambar cantik ada rounded */
+  border-radius: 15px; /* opsional biar gambar rapi */
 }
 
 .hero-slider img.active {
   opacity: 1;
 }
 
+/* Overlay */
 .hero-overlay {
   position: absolute;
   top: 0; left: 0;
   width: 100%; height: 100%;
-  background: rgba(0,0,0,0.35);
+  background: rgba(0,0,0,0.25); /* sedikit gelap biar tombol terlihat */
+  z-index: 1;
 }
 
+/* Tombol Pesan */
 .hero-text {
   position: absolute;
-  width: 100%;
-  text-align: center;
   z-index: 2;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .hero-text .btn {
