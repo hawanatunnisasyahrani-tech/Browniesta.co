@@ -4,263 +4,307 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Argani Brownies</title>
+<title>Brownies UMKM</title>
 
 <style>
-/* RESET */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
 body {
-    background: #0f0f14;
-    color: white;
+  background: #ffffff;
+  color: #333;
 }
 
-/* NAVBAR */
-nav {
-    display: flex;
-    justify-content: space-between;
-    padding: 18px 10%;
-    background: rgba(0,0,0,0.6);
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 100;
+/* ===== TITLE ===== */
+.title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.title h2 {
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+.title p {
+  color: #777;
 }
 
-nav h2 {
-    color: #ffb703;
-}
-
-nav a {
-    color: white;
-    margin-left: 20px;
-    text-decoration: none;
-}
-
-/* SECTION */
-section {
-    padding: 100px 10%;
-}
-
-/* HOME */
+/* ===== HOME (contoh, kalau sudah punya, boleh ganti) ===== */
 #home {
-    height: 100vh;
-    background: linear-gradient(to right, #0f0f14, #1c1c28);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+  height: 100vh;
+  background: linear-gradient(135deg,#1f1f1f,#3a3a3a);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
-
 #home h1 {
-    font-size: 48px;
-    color: #ffb703;
+  font-size: 48px;
 }
-
 #home p {
-    margin-top: 15px;
-    color: #ccc;
+  margin-top: 10px;
+  color: #ddd;
 }
 
-/* KATALOG */
-#catalog h2 {
-    text-align: center;
-    margin-bottom: 40px;
-    font-size: 32px;
-    color: #ffb703;
+/* ===== KATALOG PRODUK ===== */
+#produk {
+  padding: 70px 10%;
+  background: #fafafa;
 }
 
-/* SLIDER */
 .slider-wrapper {
-    display: flex;
-    justify-content: center;
-    overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 }
 
-.slider {
-    display: flex;
-    gap: 30px;
-    transition: transform 0.6s ease;
+.slider-container {
+  display: flex;
+  gap: 25px;
+  overflow: hidden;
+  scroll-behavior: smooth;
+  width: 520px; /* 2 produk di tengah */
 }
 
-.product {
-    min-width: 280px;
-    background: #1c1c28;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 0 25px rgba(255,183,3,0.2);
+.product-card {
+  min-width: 240px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  padding: 15px;
+  text-align: center;
+  transition: 0.3s;
+}
+.product-card:hover {
+  transform: translateY(-5px);
 }
 
-.product img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
+.product-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 12px;
 }
 
-.product .info {
-    padding: 15px;
-    text-align: center;
+.product-card h3 {
+  margin: 12px 0 5px;
+}
+.product-card p {
+  color: #c48b3a;
+  font-weight: bold;
 }
 
-.product h4 {
-    color: #ffb703;
+.nav-btn {
+  background: #c48b3a;
+  border: none;
+  color: white;
+  font-size: 22px;
+  padding: 10px 14px;
+  border-radius: 50%;
+  cursor: pointer;
+  margin: 0 10px;
+}
+.nav-btn:hover {
+  background: #a97428;
 }
 
 .see-all {
-    text-align: center;
-    margin-top: 40px;
+  text-align: center;
+  margin-top: 25px;
+}
+.see-all a {
+  text-decoration: none;
+  color: white;
+  background: #c48b3a;
+  padding: 10px 22px;
+  border-radius: 20px;
 }
 
-.see-all button {
-    background: #ffb703;
-    border: none;
-    padding: 12px 30px;
-    border-radius: 30px;
-    cursor: pointer;
-    font-weight: bold;
+/* ===== ABOUT ===== */
+#about {
+  padding: 80px 10%;
 }
 
-/* TENTANG */
-#about h2 {
-    text-align: center;
-    color: #ffb703;
-    margin-bottom: 30px;
+.about-box {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
-.about {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
-    align-items: center;
+.about-text {
+  flex: 1;
 }
 
-.about img {
-    width: 100%;
-    border-radius: 20px;
+.about-text h3 {
+  margin-top: 18px;
+  color: #c48b3a;
 }
 
-.about p {
-    line-height: 1.8;
-    color: #ddd;
+.about-text ul {
+  padding-left: 20px;
+  margin-top: 8px;
 }
 
-/* RESPONSIVE */
-@media (max-width: 768px) {
-    .about {
-        grid-template-columns: 1fr;
-    }
+.about-text .info {
+  margin-top: 20px;
+  background: #f5f5f5;
+  padding: 15px;
+  border-radius: 12px;
+}
+
+.about-img {
+  flex: 1;
+  text-align: center;
+}
+
+.about-img img {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 18px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background: #111;
+  color: #ccc;
+  text-align: center;
+  padding: 20px;
+  margin-top: 60px;
 }
 </style>
 </head>
 
 <body>
 
-<nav>
-<h2>Argani</h2>
-<div>
-<a href="#home">Home</a>
-<a href="#catalog">Katalog</a>
-<a href="#about">Tentang</a>
-</div>
-</nav>
-
 <!-- HOME -->
 <section id="home">
-<div>
-<h1>Argani Brownies</h1>
-<p>Brownies rumahan premium dengan cita rasa khas dan kualitas terbaik.</p>
-</div>
+  <div>
+    <h1>Brownies UMKM</h1>
+    <p>Brownies rumahan dengan rasa premium dan kualitas terbaik</p>
+  </div>
 </section>
 
-<!-- KATALOG -->
-<section id="catalog">
-<h2>Katalog Produk</h2>
+<!-- KATALOG PRODUK -->
+<section id="produk">
+  <div class="title">
+    <h2>Katalog Produk</h2>
+    <p>Pilihan brownies favorit pelanggan kami</p>
+  </div>
 
-<div class="slider-wrapper">
-<div class="slider" id="slider">
+  <div class="slider-wrapper">
+    <button class="nav-btn left" onclick="slideLeft()">❮</button>
 
-<div class="product">
-<img src="produk1.jpg">
-<div class="info">
-<h4>Brownies Original</h4>
-<p>Lembut, legit, coklat pekat.</p>
-</div>
-</div>
+    <div class="slider-container" id="slider">
+      <div class="product-card">
+        <img src="produk1.jpg">
+        <h3>Brownies Original</h3>
+        <p>Rp 25.000</p>
+      </div>
 
-<div class="product">
-<img src="produk2.jpg">
-<div class="info">
-<h4>Brownies Keju</h4>
-<p>Taburan keju melimpah.</p>
-</div>
-</div>
+      <div class="product-card">
+        <img src="produk2.jpg">
+        <h3>Brownies Coklat</h3>
+        <p>Rp 28.000</p>
+      </div>
 
-<div class="product">
-<img src="produk3.jpg">
-<div class="info">
-<h4>Brownies Kacang</h4>
-<p>Renyaah dan gurih.</p>
-</div>
-</div>
+      <div class="product-card">
+        <img src="produk3.jpg">
+        <h3>Brownies Keju</h3>
+        <p>Rp 30.000</p>
+      </div>
 
-<div class="product">
-<img src="produk4.jpg">
-<div class="info">
-<h4>Brownies Coklat Lumer</h4>
-<p>Isi coklat meleleh.</p>
-</div>
-</div>
+      <div class="product-card">
+        <img src="produk4.jpg">
+        <h3>Brownies Choco Chips</h3>
+        <p>Rp 32.000</p>
+      </div>
 
-</div>
-</div>
+      <div class="product-card">
+        <img src="produk5.jpg">
+        <h3>Brownies Kacang</h3>
+        <p>Rp 30.000</p>
+      </div>
+    </div>
 
-<div class="see-all">
-<button>Lihat Semua Produk</button>
-</div>
+    <button class="nav-btn right" onclick="slideRight()">❯</button>
+  </div>
+
+  <div class="see-all">
+    <a href="#">See All Product</a>
+  </div>
 </section>
 
-<!-- TENTANG -->
+<!-- TENTANG KAMI -->
 <section id="about">
-<h2>Tentang Kami</h2>
+  <div class="title">
+    <h2>Tentang Kami</h2>
+    <p>Mengenal lebih dekat usaha brownies kami</p>
+  </div>
 
-<div class="about">
-<div>
-<p><b>Argani Brownies</b> adalah brand brownies rumahan yang lahir dari dapur kecil dengan mimpi besar: menghadirkan brownies berkualitas premium dengan rasa yang konsisten dan memuaskan.</p>
+  <div class="about-box">
+    <div class="about-text">
 
-<p>Usaha ini bermula dari produksi rumahan, dikerjakan dengan proses yang higienis, bahan pilihan, serta kontrol rasa yang ketat agar setiap produk memiliki standar kualitas yang sama.</p>
+      <h3>Profil Usaha</h3>
+      <p><b>Brownies UMKM</b> adalah usaha rumahan yang memproduksi brownies padat berkualitas premium dengan cita rasa khas.</p>
 
-<p><b>Keunggulan utama kami</b> terletak pada tekstur brownies yang padat namun lembut, rasa cokelat yang kuat, serta varian topping yang dibuat seimbang tanpa menghilangkan cita rasa asli brownies.</p>
+      <h3>Apa yang Kami Jual</h3>
+      <p>Kami menyediakan berbagai varian brownies seperti original, coklat, keju, dan topping spesial yang dibuat fresh setiap hari.</p>
 
-<p>Kami berfokus pada kualitas dan rasa, bukan sekadar produksi massal. Setiap brownies dibuat dengan perhatian pada detail, mulai dari pemilihan bahan, proses pemanggangan, hingga pengemasan.</p>
+      <h3>Cerita Singkat Usaha</h3>
+      <p>Usaha ini dimulai dari dapur rumah dengan fokus pada kualitas rasa dan kebersihan. Kami percaya brownies bukan hanya camilan, tetapi juga bentuk kepedulian terhadap kepuasan pelanggan.</p>
 
-<p>Dengan hadirnya platform digital ini, Argani Brownies berharap dapat menjangkau lebih banyak pelanggan, membangun kepercayaan, dan tumbuh menjadi UMKM yang berdaya saing.</p>
+      <h3>Keunggulan Utama</h3>
+      <ul>
+        <li>✔ Produksi rumahan (fresh & higienis)</li>
+        <li>✔ Bahan baku berkualitas</li>
+        <li>✔ Rasa coklat kuat dan lembut</li>
+        <li>✔ Harga terjangkau</li>
+      </ul>
 
-<p><b>Jam Operasional:</b><br>Senin – Sabtu (08.00 – 20.00 WIB)</p>
-<p><b>Kontak:</b><br>WhatsApp: 0852-1691-9157</p>
-</div>
+      <h3>Penutup</h3>
+      <p>Kami berkomitmen untuk terus berkembang dan menghadirkan brownies terbaik bagi keluarga Indonesia.</p>
 
-<img src="tentang.jpg">
-</div>
+      <p class="info">
+        <b>Jam Operasional:</b> Senin – Sabtu (08.00 – 20.00 WIB)<br>
+        <b>Kontak:</b> WhatsApp 0852-1691-9157
+      </p>
+
+    </div>
+
+    <div class="about-img">
+      <img src="tentang.jpg">
+    </div>
+  </div>
 </section>
+
+<footer>
+  <p>© 2026 Brownies UMKM. All rights reserved.</p>
+</footer>
 
 <script>
 const slider = document.getElementById("slider");
-let index = 0;
 
-function autoSlide(){
-    index++;
-    if(index > slider.children.length - 2){
-        index = 0;
-    }
-    slider.style.transform = "translateX(" + (-index * 310) + "px)";
+function slideLeft() {
+  slider.scrollLeft -= 260;
 }
 
-setInterval(autoSlide, 2500);
+function slideRight() {
+  slider.scrollLeft += 260;
+}
+
+setInterval(() => {
+  slider.scrollLeft += 260;
+  if (slider.scrollLeft + slider.clientWidth >= slider.scrollWidth) {
+    slider.scrollLeft = 0;
+  }
+}, 3000);
 </script>
 
 </body>
