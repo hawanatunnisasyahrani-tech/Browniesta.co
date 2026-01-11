@@ -212,16 +212,49 @@
         </a>
     </div>
 </section>
-    <section id="tentang">
-        <div class="about-img" data-aos="fade-right">
-            <img src="produk2.jpg" alt="About Us">
+    <section id="tentang" style="display: flex; flex-direction: column; gap: 40px; align-items: center; padding: 80px 7%;">
+    <div class="about-flex-container" style="display: flex; flex-direction: row; align-items: center; gap: 60px; max-width: 1200px; width: 100%;">
+        
+        <div class="about-img" style="flex: 1; border-radius: 20px; overflow: hidden; box-shadow: 15px 15px 0 var(--secondary); max-width: 500px;" data-aos="fade-right">
+            <img src="produk2.jpg" alt="Tentang Brownies Choco" style="width: 100%; height: auto; display: block;">
         </div>
-        <div class="about-text" data-aos="fade-left">
-            <h2>Tentang Brownies Choco</h2>
-            <p>Kami adalah usaha rumahan yang menghadirkan brownies cokelat dengan cita rasa lembut, legit, dan penuh cinta. Berawal dari dapur kecil dan resep keluarga, kami percaya bahwa brownies bukan sekadar camilan, tapi juga pembawa kebahagiaan.</p>
-            <p>Setiap produk kami dibuat dari bahan pilihan berkualitas, cokelat premium, tanpa pengawet, dan diproses dengan standar kebersihan yang sangat dijaga.</p>
-            <div style="margin-top: 15px; font-weight: bold; color: var(--secondary);">Lumer di Mulut, Berkesan di Hati 🤎</div>
+
+        <div class="about-text" style="flex: 1.2;" data-aos="fade-left">
+            <h2 style="font-size: 32px; color: var(--primary); margin-bottom: 25px; line-height: 1.2; font-family: 'Lora', serif;">
+                Tentang Brownies Choco
+            </h2>
+            <div style="font-size: 16px; color: #444; line-height: 1.8; text-align: justify; font-family: 'Inter', sans-serif;">
+                <p style="margin-bottom: 20px;">
+                    Kami adalah usaha rumahan yang menghadirkan brownies cokelat dengan cita rasa lembut, legit, dan penuh cinta. Berawal dari dapur kecil dan resep keluarga, kami percaya bahwa brownies bukan sekadar camilan, tapi juga pembawa kebahagiaan.
+                </p>
+                <p style="margin-bottom: 25px;">
+                    Setiap produk kami dibuat dari bahan pilihan berkualitas, cokelat premium, tanpa pengawet, dan diproses dengan standar kebersihan yang sangat dijaga untuk memastikan kepuasan Anda di setiap gigitan.
+                </p>
+            </div>
+            <div style="font-size: 18px; font-weight: 700; color: var(--secondary); border-left: 4px solid var(--secondary); padding-left: 15px;">
+                Lumer di Mulut, Berkesan di Hati 🤎
+            </div>
         </div>
+    </div>
+</section>
+
+<style>
+    /* Mengatur agar di HP tampilan menjadi vertikal */
+    @media (max-width: 768px) {
+        .about-flex-container {
+            flex-direction: column !important;
+            text-align: center;
+        }
+        .about-text h2 {
+            font-size: 28px !important;
+            margin-top: 20px;
+        }
+        .about-text div {
+            text-align: center !important;
+            font-size: 15px !important;
+        }
+    }
+</style>
     </section>
 
     <section id="produk">
