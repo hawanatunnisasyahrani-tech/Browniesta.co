@@ -171,6 +171,34 @@ header {
         font-size: 13px;
     }
 }
+        <head>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+        <style>
+    /* Taruh kode desain premium di sini */
+    body {
+        font-family: 'Poppins', sans-serif;
+        background-color: #FFF8E1; /* Warna cream hangat */
+        color: #3E2723; /* Cokelat gelap */
+    }
+
+    h1, h2, h3 {
+        font-family: 'Playfair Display', serif;
+    }
+
+    /* Kode Card Produk yang saya berikan sebelumnya */
+    .product-card {
+        background: #ffffff;
+        border-radius: 20px;
+        transition: all 0.3s ease-in-out;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    }
+    
+    .product-card:hover {
+        transform: translateY(-10px);
+    }
+</style>
     </style>
 </head>
 <body>
@@ -278,6 +306,10 @@ header {
                 <p style="color: #d4a373; font-size: 18px; font-weight: 700; margin-bottom: 15px;">Rp 48.000</p>
                 <button onclick="openProduct('p4')" style="background: #f4f4f4; color: #4a2c2a; border: none; padding: 10px 25px; border-radius: 5px; font-weight: bold; cursor: pointer;">READ MORE</button>
             </div>
+            <div class="product-card" data-aos="fade-up">
+   <img src="brownies.jpg" alt="Brownie">
+   <h3>Fudgy Brownie</h3>
+</div>
         </div>
 
         <div class="product-card" style="background: #fff; border: 1px solid #eee; border-radius: 15px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.05); text-align: center;">
@@ -607,6 +639,13 @@ document.getElementById("searchInput").addEventListener("keyup", function(event)
     <footer>
         <p>© 2026 Digitalisasi UMKM – Brownies Lezat</p>
     </footer>
-
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000, // Kecepatan animasi (1 detik)
+        once: true      // Animasi hanya muncul sekali saat scroll
+      });
+    </script>
+</body>
 </body>
 </html>
