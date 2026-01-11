@@ -219,6 +219,52 @@ header {
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
         <style>
+        /* Styling Kartu Produk Premium */
+.product-card {
+    background: #fff;
+    border: none !important;
+    border-radius: 20px !important;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(74, 44, 42, 0.05) !important;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    text-align: center;
+}
+
+.product-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 20px 40px rgba(74, 44, 42, 0.15) !important;
+}
+
+.product-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.product-card:hover img {
+    transform: scale(1.1);
+}
+
+/* Tombol Baca Selengkapnya */
+.btn-read-more {
+    background: linear-gradient(135deg, #d4a373 0%, #bc8a5f 100%) !important;
+    color: white !important;
+    border: none;
+    padding: 12px 25px !important;
+    border-radius: 50px !important;
+    font-weight: 600 !important;
+    cursor: pointer;
+    transition: 0.3s;
+    text-transform: uppercase;
+    font-size: 13px !important;
+    margin-bottom: 10px;
+}
+
+.btn-read-more:hover {
+    background: #4a2c2a !important;
+    box-shadow: 0 5px 15px rgba(212, 163, 115, 0.4);
+}
     /* Taruh kode desain premium di sini */
     body {
         font-family: 'Poppins', sans-serif;
@@ -306,103 +352,89 @@ header {
     </div>
 </section>
 
-      <section id="produk" style="background-color: #FFF8E1; padding: 100px 5%;">
+     <section id="produk" style="background-color: #FFF8E1; padding: 100px 5%;">
     <div style="text-align: center; margin-bottom: 60px;" data-aos="fade-down">
         <h2 style="color: #4a2c2a; font-size: 42px; font-weight: 800; font-family: 'Playfair Display', serif;">Katalog Produk Kami</h2>
         <div style="width: 60px; height: 5px; background: #d4a373; margin: 20px auto; border-radius: 10px;"></div>
-        <p style="color: #6d4c41; font-size: 18px; font-family: 'Poppins', sans-serif;">Pilih varian brownies favorit Anda, dibuat fresh setiap hari.</p>
+        <p style="color: #6d4c41; font-size: 18px;">Pilih varian brownies favorit Anda, dibuat fresh setiap hari.</p>
     </div>
 
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 40px; max-width: 1200px; margin: 0 auto;">
         
         <div class="product-card" data-aos="fade-up" data-aos-delay="100">
-            <div style="overflow: hidden; height: 250px;">
-                <img src="produk1.jpg" style="width: 100%; height: 100%; object-fit: cover;" alt="Choco Almond">
-            </div>
-            <div style="padding: 25px; text-align: center;">
-                <h3 style="color: #4a2c2a; font-size: 19px; font-weight: 700; height: 50px;">Choco Almond 12 Kotak</h3>
-                <p style="color: #d4a373; font-size: 22px; font-weight: 800; margin-bottom: 20px;">Rp 85.000</p>
+            <img src="produk1.jpg" alt="Choco Almond">
+            <div style="padding: 25px;">
+                <h3 style="color: #4a2c2a; font-size: 19px; font-weight: 700;">Choco Almond 12 Kotak</h3>
+                <p style="color: #d4a373; font-size: 22px; font-weight: 800; margin: 10px 0 20px;">Rp 85.000</p>
                 <button class="btn-read-more" onclick="openProduct('p1')">READ MORE</button>
             </div>
         </div>
 
         <div class="product-card" data-aos="fade-up" data-aos-delay="200">
-            <div style="overflow: hidden; height: 250px;">
-                <img src="produk2.jpg" style="width: 100%; height: 100%; object-fit: cover;" alt="Brownies Choco Almond">
-            </div>
-            <div style="padding: 25px; text-align: center;">
-                <h3 style="color: #4a2c2a; font-size: 19px; font-weight: 700; height: 50px;">Brownies Choco Almond</h3>
-                <p style="color: #d4a373; font-size: 22px; font-weight: 800; margin-bottom: 20px;">Rp 50.000</p>
+            <img src="produk2.jpg" alt="Brownies Choco Almond">
+            <div style="padding: 25px;">
+                <h3 style="color: #4a2c2a; font-size: 19px; font-weight: 700;">Brownies Choco Almond</h3>
+                <p style="color: #d4a373; font-size: 22px; font-weight: 800; margin: 10px 0 20px;">Rp 50.000</p>
                 <button class="btn-read-more" onclick="openProduct('p2')">READ MORE</button>
             </div>
         </div>
 
         <div class="product-card" data-aos="fade-up" data-aos-delay="300">
-            <div style="overflow: hidden; height: 250px;">
-                <img src="produk3.jpg" style="width: 100%; height: 100%; object-fit: cover;" alt="Fudgy Brownies Original">
-            </div>
-            <div style="padding: 25px; text-align: center;">
-                <h3 style="color: #4a2c2a; font-size: 19px; font-weight: 700; height: 50px;">Fudgy Brownies Original</h3>
-                <p style="color: #d4a373; font-size: 22px; font-weight: 800; margin-bottom: 20px;">Rp 40.000</p>
+            <img src="produk3.jpg" alt="Fudgy Brownies Original">
+            <div style="padding: 25px;">
+                <h3 style="color: #4a2c2a; font-size: 19px; font-weight: 700;">Fudgy Brownies Original</h3>
+                <p style="color: #d4a373; font-size: 22px; font-weight: 800; margin: 10px 0 20px;">Rp 40.000</p>
                 <button class="btn-read-more" onclick="openProduct('p3')">READ MORE</button>
             </div>
         </div>
 
         <div class="product-card" data-aos="fade-up" data-aos-delay="400">
-            <div style="overflow: hidden; height: 250px;">
-                <img src="produk4.jpg" style="width: 100%; height: 100%; object-fit: cover;" alt="Brownies Oreo Crunchy">
-            </div>
-            <div style="padding: 25px; text-align: center;">
-                <h3 style="color: #4a2c2a; font-size: 19px; font-weight: 700; height: 50px;">Brownies Oreo Crunchy</h3>
-                <p style="color: #d4a373; font-size: 22px; font-weight: 800; margin-bottom: 20px;">Rp 48.000</p>
+            <img src="produk4.jpg" alt="Brownies Oreo Crunchy">
+            <div style="padding: 25px;">
+                <h3 style="color: #4a2c2a; font-size: 19px; font-weight: 700;">Brownies Oreo Crunchy</h3>
+                <p style="color: #d4a373; font-size: 22px; font-weight: 800; margin: 10px 0 20px;">Rp 48.000</p>
                 <button class="btn-read-more" onclick="openProduct('p4')">READ MORE</button>
             </div>
         </div>
 
         <div class="product-card" data-aos="fade-up" data-aos-delay="500">
-            <div style="overflow: hidden; height: 250px;">
-                <img src="produk5.jpg" style="width: 100%; height: 100%; object-fit: cover;" alt="Signature Talas Keju">
-            </div>
-            <div style="padding: 25px; text-align: center;">
-                <h3 style="color: #4a2c2a; font-size: 19px; font-weight: 700; height: 50px;">Signature Talas Keju</h3>
-                <p style="color: #d4a373; font-size: 22px; font-weight: 800; margin-bottom: 20px;">Rp 46.000</p>
+            <img src="produk5.jpg" alt="Signature Talas Keju">
+            <div style="padding: 25px;">
+                <h3 style="color: #4a2c2a; font-size: 19px; font-weight: 700;">Signature Talas Keju</h3>
+                <p style="color: #d4a373; font-size: 22px; font-weight: 800; margin: 10px 0 20px;">Rp 46.000</p>
                 <button class="btn-read-more" onclick="openProduct('p5')">READ MORE</button>
             </div>
         </div>
 
         <div class="product-card" data-aos="fade-up" data-aos-delay="600">
-            <div style="overflow: hidden; height: 250px;">
-                <img src="produk6.jpg" style="width: 100%; height: 100%; object-fit: cover;" alt="Donat Kukus Cokelat">
-            </div>
-            <div style="padding: 25px; text-align: center;">
-                <h3 style="color: #4a2c2a; font-size: 19px; font-weight: 700; height: 50px;">Donat Kukus Cokelat</h3>
-                <p style="color: #d4a373; font-size: 22px; font-weight: 800; margin-bottom: 20px;">Rp 42.000</p>
+            <img src="produk6.jpg" alt="Donat Kukus Cokelat">
+            <div style="padding: 25px;">
+                <h3 style="color: #4a2c2a; font-size: 19px; font-weight: 700;">Donat Kukus Cokelat</h3>
+                <p style="color: #d4a373; font-size: 22px; font-weight: 800; margin: 10px 0 20px;">Rp 42.000</p>
                 <button class="btn-read-more" onclick="openProduct('p6')">READ MORE</button>
             </div>
         </div>
 
         <div class="product-card" data-aos="fade-up" data-aos-delay="700">
-            <div style="overflow: hidden; height: 250px;">
-                <img src="produk7.jpg" style="width: 100%; height: 100%; object-fit: cover;" alt="Donat Talas Cokelat">
-            </div>
-            <div style="padding: 25px; text-align: center;">
-                <h3 style="color: #4a2c2a; font-size: 19px; font-weight: 700; height: 50px;">Donat Talas Cokelat</h3>
-                <p style="color: #d4a373; font-size: 22px; font-weight: 800; margin-bottom: 20px;">Rp 25.000</p>
+            <img src="produk7.jpg" alt="Donat Talas Cokelat">
+            <div style="padding: 25px;">
+                <h3 style="color: #4a2c2a; font-size: 19px; font-weight: 700;">Donat Talas Cokelat</h3>
+                <p style="color: #d4a373; font-size: 22px; font-weight: 800; margin: 10px 0 20px;">Rp 25.000</p>
                 <button class="btn-read-more" onclick="openProduct('p7')">READ MORE</button>
             </div>
         </div>
 
         <div class="product-card" data-aos="fade-up" data-aos-delay="800">
-            <div style="overflow: hidden; height: 250px;">
-                <img src="produk8.jpg" style="width: 100%; height: 100%; object-fit: cover;" alt="Donat Bubble Gum">
-            </div>
-            <div style="padding: 25px; text-align: center;">
-                <h3 style="color: #4a2c2a; font-size: 19px; font-weight: 700; height: 50px;">Donat Bubble Gum</h3>
-                <p style="color: #d4a373; font-size: 22px; font-weight: 800; margin-bottom: 20px;">Rp 28.000</p>
+            <img src="produk8.jpg" alt="Donat Bubble Gum">
+            <div style="padding: 25px;">
+                <h3 style="color: #4a2c2a; font-size: 19px; font-weight: 700;">Donat Bubble Gum</h3>
+                <p style="color: #d4a373; font-size: 22px; font-weight: 800; margin: 10px 0 20px;">Rp 28.000</p>
                 <button class="btn-read-more" onclick="openProduct('p8')">READ MORE</button>
             </div>
         </div>
 
+    </div>
+</section>
 
 
         </div>
@@ -703,6 +735,13 @@ document.getElementById("searchInput").addEventListener("keyup", function(event)
         once: true      // Animasi hanya muncul sekali saat scroll
       });
     </script>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init({
+        duration: 1000,
+        once: true
+    });
+</script>
 </body>
 </body>
 </html>
