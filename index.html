@@ -252,10 +252,86 @@
         </div>
     </section>
 
-    <section id="kontak" style="text-align: center;">
-        <h2 style="color: var(--primary); margin-bottom: 15px;">Hubungi Kami</h2>
-        <a href="https://wa.me/6285216919157" target="_blank" class="btn-gold" style="background: #25d366;">CHAT VIA WHATSAPP</a>
+    <section id="kontak" style="background: #fff; padding: 80px 7%;">
+        <div class="contact-wrapper" style="max-width: 1100px; margin: 0 auto;">
+            
+            <div style="text-align: center; margin-bottom: 50px;" data-aos="fade-up">
+                <h2 style="font-size: clamp(22px, 4vw, 32px); color: var(--primary); margin-bottom: 20px;">
+                    MAU PESAN BANYAK <span style="color: var(--secondary);">LAPIS BOGOR SANGKURIANG?</span>
+                </h2>
+                <p style="color: #666; font-size: 15px; line-height: 1.8; max-width: 900px; margin: 0 auto;">
+                    Apakah kamu ingin Lapis Bogor Sangkuriang untuk kebutuhan berbagai kegiatan kamu? 
+                    Kami menawarkan banyak varian lezat yang dapat dipesan dalam jumlah besar, ideal untuk acara perusahaan, kafe, restoran, dan toko ritel. 
+                    Dengan bahan-bahan terbaik dan resep yang teruji, Lapis Bogor Sangkuriang tidak hanya memanjakan lidah tetapi juga menambah nilai bagi bisnis kamu. 
+                    <br><br>
+                    <strong>Hubungi kami untuk mendapatkan penawaran khusus dan solusi pemesanan yang disesuaikan dengan kebutuhan Kamu.</strong>
+                </p>
+            </div>
+
+            <div style="background: #fdf8f3; padding: 40px; border-radius: 25px; border: 1px solid #eee; box-shadow: 0 10px 30px rgba(0,0,0,0.05);" data-aos="fade-up">
+                <form onsubmit="sendToWA(event)">
+                    <div style="display: grid; grid-template-columns: 1fr; gap: 20px;">
+                        
+                        <div>
+                            <label style="display: block; font-weight: 700; margin-bottom: 8px; font-size: 14px; color: var(--primary);">Kebutuhan*</label>
+                            <select id="kebutuhan" required style="width: 100%; padding: 12px; border-radius: 10px; border: 1px solid #ccc; font-family: inherit; outline: none; cursor: pointer;">
+                                <option value="" disabled selected>—Silakan pilih opsi—</option>
+                                <option value="Bisnis to Bisnis">Bisnis to Bisnis</option>
+                                <option value="Jadi Mitra">Jadi Mitra</option>
+                                <option value="Keluhan & Saran">Keluhan & Saran</option>
+                            </select>
+                        </div>
+
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
+                            <div>
+                                <label style="display: block; font-weight: 700; margin-bottom: 8px; font-size: 14px; color: var(--primary);">Nama Lengkap*</label>
+                                <input type="text" id="nama_form" required placeholder="Masukkan nama lengkap" style="width: 100%; padding: 12px; border-radius: 10px; border: 1px solid #ccc; outline: none;">
+                            </div>
+                            <div>
+                                <label style="display: block; font-weight: 700; margin-bottom: 8px; font-size: 14px; color: var(--primary);">No. WhatsApp*</label>
+                                <input type="tel" id="wa_form" required placeholder="Contoh: 08123456789" style="width: 100%; padding: 12px; border-radius: 10px; border: 1px solid #ccc; outline: none;">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label style="display: block; font-weight: 700; margin-bottom: 8px; font-size: 14px; color: var(--primary);">Email</label>
+                            <input type="email" id="email_form" placeholder="Alamat email aktif" style="width: 100%; padding: 12px; border-radius: 10px; border: 1px solid #ccc; outline: none;">
+                        </div>
+
+                        <div>
+                            <label style="display: block; font-weight: 700; margin-bottom: 8px; font-size: 14px; color: var(--primary);">Isi Pesan*</label>
+                            <textarea id="pesan_form" required rows="4" placeholder="Tuliskan detail kebutuhan acara atau bisnis kamu..." style="width: 100%; padding: 12px; border-radius: 10px; border: 1px solid #ccc; outline: none; font-family: inherit; resize: none;"></textarea>
+                        </div>
+
+                        <button type="submit" style="background: var(--primary); color: white; padding: 15px; border: none; border-radius: 50px; font-weight: 700; cursor: pointer; font-size: 15px; transition: 0.3s; margin-top: 10px;">
+                            KIRIM PERMINTAAN SEKARANG
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
     </section>
+
+    <script>
+        function sendToWA(event) {
+            event.preventDefault();
+            const kebutuhan = document.getElementById('kebutuhan').value;
+            const nama = document.getElementById('nama_form').value;
+            const wa = document.getElementById('wa_form').value;
+            const email = document.getElementById('email_form').value || '-';
+            const pesan = document.getElementById('pesan_form').value;
+            
+            const nomorAdmin = "6285216919157";
+            const text = `Halo Admin, saya ingin mengajukan pesanan/kerjasama:%0A%0A` +
+                         `*Kebutuhan:* ${kebutuhan}%0A` +
+                         `*Nama:* ${nama}%0A` +
+                         `*WhatsApp:* ${wa}%0A` +
+                         `*Email:* ${email}%0A` +
+                         `*Pesan:* ${pesan}`;
+            
+            window.open(`https://wa.me/${nomorAdmin}?text=${text}`, '_blank');
+        }
+    </script>
 </main>
 
 <div id="productModal" class="modal">
