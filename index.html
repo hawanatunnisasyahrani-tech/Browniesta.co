@@ -291,7 +291,7 @@
         <div class="info-card" style="max-width: 900px; margin: 0 auto;" data-aos="fade-up">
             <p style="margin-bottom: 20px; font-weight: 600; color: var(--primary);">📍 Alamat: Jl. Jembatan Pari Gang H. Isa 1 Rt. 02 Rw 03 Cijujung, Sukaraja, Kabupaten Bogor.</p>
             <div style="width: 100%; height: 350px; border-radius: 20px; overflow: hidden; border: 1px solid #eee;">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.85621458925!2d106.8400!3d-6.5390!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwMzInMjAuNCJTIDEwNsKwNTAnMjQuMCJF!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.670562479636!2d106.828!3d-6.505!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwMzAnMTguMCJTIDEwNiw0OSc0MC44IkU!5e0!3m2!1sid!2sid!4v1640000000000" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </div>
     </section>
@@ -408,7 +408,7 @@
             const t = c.querySelector('h3').innerText.toLowerCase();
             c.style.display = t.includes(kw) ? "block" : "none";
         });
-        document.getElementById('produk').scrollIntoView();
+        document.getElementById('produk').scrollIntoView({ behavior: 'smooth' });
     }
 </script>
 
