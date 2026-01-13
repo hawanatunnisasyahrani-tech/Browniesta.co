@@ -108,30 +108,27 @@
 </button>
 
 <main>
-    <section id="home" class="hero">
-        <img src="produk12.jpg" 
-             alt="Browniesta Hero Image" 
-             class="hero-img" 
-             onerror="this.src='https://images.unsplash.com/photo-1606313564200-e75d5e30476c?q=80&w=1974&auto=format&fit=crop';"> 
-        
-        <div class="hero-overlay" style="background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.6));"></div>
+    <section id="home" class="hero" style="position: relative; overflow: hidden; height: 80vh; display: flex; align-items: center; justify-content: center; text-align: center;">
+    
+    <img src="produk12.jpg" alt="Browniesta Hero Image" class="hero-img" 
+         style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 1;">
+    
+    <div class="hero-overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.6)); z-index: 2;"></div>
 
-        <div class="hero-content" data-aos="zoom-in">
-            <h1 style="color: white; text-shadow: 2px 4px 20px rgba(0,0,0,0.6); font-size: clamp(40px, 10vw, 75px);">Browniesta.co</h1>
-            
-            <p style="font-size: clamp(16px, 4vw, 22px); opacity: 0.95; margin-bottom: 35px; text-shadow: 1px 2px 10px rgba(0,0,0,0.5); font-weight: 500; color: #fff;">
-                Premium Homemade Brownies - Rasakan kebahagiaan di setiap gigitan! ✨
-            </p>
-            
-            <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
-                <a href="#produk" style="background: var(--secondary); color: white; padding: 18px 40px; border-radius: 50px; text-decoration: none; font-weight: 800; transition: 0.3s; box-shadow: 0 10px 25px rgba(198, 149, 91, 0.4); text-transform: uppercase; letter-spacing: 1px;">
-                    LIHAT MENU
-                </a>
-                
-                <a href="#lokasi" style="background: rgba(255,255,255,0.15); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); color: white; padding: 18px 40px; border-radius: 50px; text-decoration: none; font-weight: 700; border: 1px solid rgba(255,255,255,0.3); transition: 0.3s; text-transform: uppercase; letter-spacing: 1px;">
-                    LOKASI TOKO
-                </a>
-           
+    <div class="hero-content" data-aos="zoom-in" style="position: relative; z-index: 3; padding: 0 20px;">
+        <h1 style="color: white; font-family: 'Lora', serif; font-size: clamp(40px, 10vw, 75px); text-shadow: 2px 4px 15px rgba(0,0,0,0.5); margin-bottom: 10px;">
+            Browniesta.co
+        </h1>
+        
+        <p style="font-size: clamp(16px, 4vw, 22px); color: #fff; opacity: 0.95; margin-bottom: 35px; text-shadow: 1px 2px 10px rgba(0,0,0,0.5); max-width: 700px; margin-left: auto; margin-right: auto;">
+            Premium Homemade Brownies - Rasakan kebahagiaan di setiap gigitan! ✨
+        </p>
+        
+        <a href="#produk" style="background: var(--secondary); color: white; padding: 18px 45px; border-radius: 50px; text-decoration: none; font-weight: 800; display: inline-block; transition: 0.3s; box-shadow: 0 10px 30px rgba(198, 149, 91, 0.4); text-transform: uppercase; letter-spacing: 1px;">
+            BELI SEKARANG
+        </a>
+    </div>
+</section>
         </div>
     </section></a>
         </div>
